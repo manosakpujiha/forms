@@ -8,11 +8,17 @@ const formData = {};
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
-    console.log('creditCard:', creditCard.value);
-    console.log('file:', file.value);
-    console.log('book:', book.value);
-    console.log('check:', check.checked);
-    console.log(formData);
+    // console.log('creditCard:', creditCard.value);
+    // console.log('file:', file.value);
+    // console.log('book:', book.value);
+    // console.log('check:', check.checked);
+    const formData2 = {
+        'credit Card' : creditCard.value,
+        'file': file.value,
+        'book': book.value,
+        'check': check.checked,
+    };
+    console.log(formData2);
 })
 
 // check.addEventListener('input', function(e) {
@@ -38,9 +44,9 @@ form.addEventListener('submit', function(e) {
  for (let input of [creditCard, file, book, check]) {
     input.addEventListener('change', ({target}) => {
         if (target.type === 'checkbox') {
-            formData[target.name] = target.checked ;
+            formData[target.name] = target.checked;
         } else {
-            formData[target.name] = target.value
+            formData[target.name] = target.value;
         }
         console.log(formData);
     });

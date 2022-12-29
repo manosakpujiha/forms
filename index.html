@@ -5,22 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #form {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+        label {
+            margin-top: 20px;
+        }
+
+    </style>
 </head>
 <body>
-    <form action="./page.html" id="form">
-        <input type="text" name="text" id="credit-card" placeholder="Credit Card">
-        <input type="file" name="file" id="file" placeholder="./Swimsuit" >
-        <select name="book" title="book" id="book">
+    <form action="./page.html" id="form" >
+        <label for="text">Type in credit card number</label>
+        <input type="text" name="text" id="credit-card" placeholder="123 xxxx xxxx 458">
+        <label for="file">Select File</label>
+        <input type="file" name="file" id="file">
+
+        <label for="book">Select Book</label>
+        <select name="book" id="book" >
             <option value="Gold">Gold</option>
             <option value="Silver">Silver</option>
             <option value="Bronze">Bronze</option>
-            <option value="Diamond">Diamond</option>
+            <option selected value="Diamond">Diamond</option>
         </select>
+
         <label>
-            I agree to all ther terms and conditions
+            Terms and conditions
             <input type="checkbox" name="check" id="check">
         </label>
-        <input type="submit" value="submit">
+
+        <label for="submit"></label>
+        <input type="submit" name="submit" value="submit">
     </form>
     <script src="./index.js"></script>
 </body>
